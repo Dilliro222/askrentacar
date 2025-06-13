@@ -3,107 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASK RENT a CAR</title>
+    <title>ASK RENT A CAR - Kyrenia, Cyprus</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <script src="animations.js"></script>
+    <script>
+        function changeLanguage(lang) {
+            document.querySelectorAll('.en').forEach(e => e.style.display = lang === 'en' ? '' : 'none');
+            document.querySelectorAll('.tr').forEach(e => e.style.display = lang === 'tr' ? '' : 'none');
+        }
+        window.onload = function() { changeLanguage('en'); };
+    </script>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <img src="logo.svg" alt="ASK RENT a CAR Logo" class="logo-img">
-                <span>ASK RENT a CAR</span>
-            </div>
-            <div class="header-right">
-                <a href="https://wa.me/905488448802" class="whatsapp-btn-header">
-                    <i class="fab fa-whatsapp"></i>
-                    <span class="en">WhatsApp</span>
-                    <span class="tr" style="display: none;">WhatsApp</span>
-                </a>
-                <div class="language-switch">
-                    <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
-                    <button onclick="changeLanguage('tr')" class="lang-btn">TR</button>
+        <nav class="navbar new-navbar">
+            <div class="navbar-inner">
+                <div class="logo-area">
+                    <a href="#" class="home-btn" style="margin-right: 1rem; text-decoration: none; font-weight: 700; color: var(--primary-color); font-size: 1.1rem;">Home</a>
+                    <a href="#contact" class="contact-btn en" style="margin-right: 1rem; text-decoration: none; font-weight: 700; color: var(--primary-color); font-size: 1.1rem;">Contact</a>
+                    <a href="#contact" class="contact-btn tr" style="margin-right: 1rem; text-decoration: none; font-weight: 700; color: var(--primary-color); font-size: 1.1rem; display:none;">İletişim</a>
+                    <div class="logo-circle">
+                        <i class="fas fa-car-side" style="font-size: 2.1rem; color: var(--primary-color);"></i>
+                    </div>
+                    <span class="brand-name">ASK RENT A CAR</span>
+                </div>
+                <div class="navbar-actions">
+                    <a href="https://wa.me/905488448802" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="en">WhatsApp</span>
+                        <span class="tr" style="display:none;">WhatsApp</span>
+                    </a>
+                    <div class="language-switch">
+                        <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+                        <button onclick="changeLanguage('tr')" class="lang-btn">TR</button>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1 class="en">Welcome to ASK RENT a CAR</h1>
-            <h1 class="tr" style="display: none;">ASK RENT a CAR'a Hoş Geldiniz</h1>
-            <p class="en">Your trusted partner for cars and bikes in Kyrenia, Cyprus</p>
-            <p class="tr" style="display: none;">Kıbrıs, Girne'de araçlar ve motosikletler için güvenilir ortağınız</p>
-        </section>
-
-        <section class="vehicles">
-            <h2 class="en">Our Vehicles</h2>
-            <h2 class="tr" style="display: none;">Araçlarımız</h2>
-            <div class="vehicle-grid">
-                <div class="vehicle-card">
-                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d" alt="Car">
-                    <h3 class="en">Cars</h3>
-                    <h3 class="tr" style="display: none;">Araçlar</h3>
-                </div>
-                <div class="vehicle-card">
-                    <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87" alt="100cc Bike">
-                    <h3 class="en">Bikes</h3>
-                    <h3 class="tr" style="display: none;">Motosikletler</h3>
+        <section class="hero-section">
+            <div class="hero-bg-map">
+                <img src="foto/cyprus png.png" alt="Cyprus Map" class="cyprus-map">
+                <img src="foto/red car png.png" alt="Red Car" class="moving-car">
+            </div>
+            <div class="hero-text-bg">
+                <div class="hero-content">
+                    <h1 class="en">Experience Cyprus with ASK RENT A CAR</h1>
+                    <h1 class="tr" style="display:none;">ASK RENT A CAR ile Kıbrıs'ı Keşfedin</h1>
+                    <p class="en">Premium Japanese car rental services in Kyrenia. Book now and enjoy your journey with ASK RENT A CAR!</p>
+                    <p class="tr" style="display:none;">Girne'de premium Japon araç kiralama hizmetleri. Hemen rezervasyon yapın, yolculuğunuzu ASK RENT A CAR ile keyifli hale getirin!</p>
+                    <a href="https://wa.me/905488448802" class="hero-btn en">Make a Reservation</a>
+                    <a href="https://wa.me/905488448802" class="hero-btn tr" style="display:none;">Rezervasyon Yap</a>
                 </div>
             </div>
         </section>
 
-        <section class="electronics">
-            <h2 class="en">Electrical Equipment</h2>
-            <h2 class="tr" style="display: none;">Elektrik Ekipmanları</h2>
-            <div class="electronics-grid">
-                <div class="electronics-card">
-                    <img src="foto/tasarruflu-ampuller.png" alt="Light Bulb">
-                    <h3 class="en">Light Bulbs</h3>
-                    <h3 class="tr" style="display: none;">Ampüller</h3>
+        <section class="about-section">
+            <h2 class="en">About ASK RENT A CAR</h2>
+            <h2 class="tr" style="display:none;">ASK RENT A CAR Hakkında</h2>
+            <div class="about-content">
+                <p class="en">ASK RENT A CAR is a well-established car rental company with over 20 years of experience. We are one of the leading car rental brands in Northern Cyprus.</p>
+                <p class="tr" style="display:none;">ASK RENT A CAR, 20 yılı aşkın deneyime sahip, köklü bir araç kiralama şirketidir. Kuzey Kıbrıs'ın önde gelen araç kiralama markalarından biriyiz.</p>
+                
+                <h3 class="en">Our Rental Terms</h3>
+                <h3 class="tr" style="display:none;">Kiralama Koşullarımız</h3>
+                <p class="en">For car rental procedures:</p>
+                <p class="tr" style="display:none;">Araç kiralama işlemleri için:</p>
+                <ul>
+                    <li class="en">The renter must be at least 25 years old</li>
+                    <li class="tr" style="display:none;">Kiracı en az 25 yaşında olmalıdır</li>
+                    <li class="en">The renter must not be a student in Northern Cyprus</li>
+                    <li class="tr" style="display:none;">Kiracı Kuzey Kıbrıs'ta öğrenci olmamalıdır</li>
+                </ul>
+                <p class="en">Guests who meet these conditions can easily rent a vehicle with a valid Turkish driver's license and ID.</p>
+                <p class="tr" style="display:none;">Bu koşulları karşılayan misafirler, geçerli bir Türk sürücü belgesi ve kimlik kartı ile kolayca araç kiralayabilirler.</p>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <i class="fas fa-shuttle-van"></i>
+                    <div class="stat-number" id="cars-count">1</div>
+                    <div class="stat-label en">Cars</div>
+                    <div class="stat-label tr" style="display:none;">Araç</div>
                 </div>
-                <div class="electronics-card">
-                    <img src="foto/uygun-fiyatli-15-mm-nya-elektrik-kablo-80a1f4.jpg" alt="Electrical Cables">
-                    <h3 class="en">Electrical Cables</h3>
-                    <h3 class="tr" style="display: none;">Elektrik Kabloları</h3>
+                <div class="stat-card">
+                    <i class="fas fa-warehouse"></i>
+                    <div class="stat-number" id="brands-count">1</div>
+                    <div class="stat-label en">Different Brands</div>
+                    <div class="stat-label tr" style="display:none;">Farklı Marka</div>
                 </div>
-                <div class="electronics-card">
-                    <img src="foto/transistor-1024x683.jpg" alt="Transistors">
-                    <h3 class="en">Transistors</h3>
-                    <h3 class="tr" style="display: none;">Transistörler</h3>
+                <div class="stat-card">
+                    <i class="fas fa-store-alt"></i>
+                    <div class="stat-number" id="offices-count">1</div>
+                    <div class="stat-label en">Offices</div>
+                    <div class="stat-label tr" style="display:none;">Ofis</div>
                 </div>
-                <div class="electronics-card">
-                    <img src="foto/aydinlatma ekipmanlari.png" alt="Lighting Equipment">
-                    <h3 class="en">Lighting Equipment</h3>
-                    <h3 class="tr" style="display: none;">Aydınlatma Ekipmanları</h3>
+            </div>
+        </section>
+        <script>
+        // Animated Counters
+        function animateValue(id, start, end, duration) {
+            let range = end - start;
+            let current = start;
+            let increment = end > start ? 1 : -1;
+            let stepTime = Math.abs(Math.floor(duration / range));
+            const obj = document.getElementById(id);
+            const timer = setInterval(function() {
+                current += increment;
+                obj.textContent = current;
+                if (current == end) {
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
+        window.onload = function() {
+            changeLanguage('en');
+            animateValue("cars-count", 1, 25, 1200);
+            animateValue("brands-count", 1, 10, 1200);
+        };
+        </script>
+
+        <section class="vehicle-models">
+            <h2 class="en">Our Premium Japanese Fleet</h2>
+            <h2 class="tr" style="display:none;">Premium Japon Filomuz</h2>
+            <div class="vehicle-cards">
+                <div class="vehicle-card">
+                    <img src="foto/nissan note.jpg" alt="Nissan Note">
+                    <h3>Nissan Note</h3>
+                    <p class="en">Family Car - Contact for Price</p>
+                    <p class="tr" style="display:none;">Aile Arabası - Fiyat için İletişime Geçin</p>
+                </div>
+                <div class="vehicle-card">
+                    <img src="foto/scooter.jpeg" alt="100cc Bike">
+                    <h3>100cc Bike</h3>
+                    <p class="en">Motorbike - Contact for Price</p>
+                    <p class="tr" style="display:none;">Motosiklet - Fiyat için İletişime Geçin</p>
+                </div>
+                <div class="vehicle-card">
+                    <img src="foto/HONDA FIT.jpg" alt="Honda Fit">
+                    <h3>Honda Fit</h3>
+                    <p class="en">Family Car - Contact for Price</p>
+                    <p class="tr" style="display:none;">Aile Arabası - Fiyat için İletişime Geçin</p>
+                </div>
+                <div class="vehicle-card">
+                    <img src="foto/SUZUKI SWIFT.jpg" alt="Suzuki Swift">
+                    <h3>Suzuki Swift</h3>
+                    <p class="en">Family Car - Contact for Price</p>
+                    <p class="tr" style="display:none;">Aile Arabası - Fiyat için İletişime Geçin</p>
                 </div>
             </div>
         </section>
 
-        <section class="contact">
-            <h2 class="en">Contact Us</h2>
-            <h2 class="tr" style="display: none;">Bize Ulaşın</h2>
-            <div class="contact-info">
-                <div class="phone-numbers">
-                    <p><i class="fas fa-phone"></i> +90 548 844 8802</p>
-                    <p><i class="fas fa-phone"></i> +90 533 844 8802</p>
-                    <p><i class="fas fa-phone"></i> +90 542 884 2392</p>
+        <section class="why-choose-us">
+            <h2 class="en">Why Choose Us</h2>
+            <h2 class="tr" style="display:none;">Neden Bizi Seçmelisiniz?</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-car"></i>
+                    <h4 class="en">Premium Japanese Fleet</h4>
+                    <h4 class="tr" style="display:none;">Premium Japon Filosu</h4>
+                    <p class="en">Well-maintained and comfortable Japanese vehicles for every family need.</p>
+                    <p class="tr" style="display:none;">Her aile ihtiyacı için bakımlı ve konforlu Japon araçları.</p>
                 </div>
-                <p class="location">
+                <div class="feature">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span class="en">Kyrenia, Cyprus</span>
-                    <span class="tr" style="display: none;">Girne, Kıbrıs</span>
-                </p>
+                    <h4 class="en">Island-wide Service</h4>
+                    <h4 class="tr" style="display:none;">Ada Genelinde Hizmet</h4>
+                    <p class="en">Flexible pick-up and drop-off locations across the island.</p>
+                    <p class="tr" style="display:none;">Adanın her yerinde esnek teslim ve teslim alma noktaları.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-headset"></i>
+                    <h4 class="en">24/7 Support</h4>
+                    <h4 class="tr" style="display:none;">7/24 Destek</h4>
+                    <p class="en">Round-the-clock customer support and vehicle delivery.</p>
+                    <p class="tr" style="display:none;">Günün her saati müşteri desteği ve araç teslimatı.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2 class="en">Frequently Asked Questions</h2>
+            <h2 class="tr" style="display:none;">Sıkça Sorulan Sorular</h2>
+            <div class="faq-content">
+                <div class="faq-item">
+                    <h3 class="en">Can I drive under the influence of alcohol in Cyprus?</h3>
+                    <h3 class="tr" style="display:none;">Kıbrıs'ta alkollü araç kullanabilir miyim?</h3>
+                    <p class="en">Driving under the influence of alcohol is strictly prohibited in Cyprus, and there is zero tolerance on this matter. This law, which is extremely important for traffic safety and public health, aims to prevent accidents caused by drunk driving. Serious penalties are imposed if drivers are found to be under the influence.</p>
+                    <p class="tr" style="display:none;">Kıbrıs'ta alkollü araç kullanmak kesinlikle yasaktır ve bu konuda sıfır tolerans uygulanmaktadır. Trafik güvenliği ve halk sağlığı için son derece önemli olan bu yasa, alkollü araç kullanımından kaynaklanan kazaları önlemeyi amaçlamaktadır. Sürücülerin alkollü olduğu tespit edilirse ciddi cezalar uygulanır.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="en">What happens if the reserved vehicle breaks down?</h3>
+                    <h3 class="tr" style="display:none;">Rezerve edilen araç arızalanırsa ne olur?</h3>
+                    <p class="en">If the reserved vehicle becomes unusable due to any malfunction, our company reserves the right to provide the customer with an alternative vehicle. In this case, prioritizing customer satisfaction, a vehicle of the same class or with similar features will be offered.</p>
+                    <p class="tr" style="display:none;">Rezerve edilen araç herhangi bir arıza nedeniyle kullanılamaz hale gelirse, şirketimiz müşteriye alternatif bir araç sağlama hakkını saklı tutar. Bu durumda, müşteri memnuniyetini ön planda tutarak, aynı sınıfta veya benzer özelliklerde bir araç sunulacaktır.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="en">What is the traffic flow like in Cyprus?</h3>
+                    <h3 class="tr" style="display:none;">Kıbrıs'ta trafik akışı nasıldır?</h3>
+                    <p class="en">The traffic flow in Cyprus operates on the left side of the road, similar to the UK. Vehicles have right-hand drive, meaning drivers sit on the right side and follow traffic on the left lane. This setup can be an adjustment for tourists and foreign drivers.</p>
+                    <p class="tr" style="display:none;">Kıbrıs'ta trafik akışı, İngiltere'deki gibi yolun sol tarafında işler. Araçlar sağdan direksiyonludur, yani sürücüler sağ tarafta oturur ve sol şeritte trafiği takip eder. Bu düzen, turistler ve yabancı sürücüler için bir uyum gerektirebilir.</p>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p class="en">&copy; 2024 ASK RENT a CAR. All rights reserved.</p>
-        <p class="tr" style="display: none;">&copy; 2024 ASK RENT a CAR. Tüm hakları saklıdır.</p>
+        <div class="footer-content" id="contact">
+            <div class="footer-contact">
+                <p><i class="fas fa-phone"></i> +90 548 844 8802</p>
+                <p><i class="fas fa-phone"></i> +90 533 844 8802</p>
+                <a href="https://wa.me/905488448802" class="footer-whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <p><i class="fas fa-map-marker-alt"></i> Mücahitler caddesi, Kyrenia, Cyprus</p>
+                <p class="working-hours en"><i class="far fa-clock"></i> Working Hours: 24/7</p>
+                <p class="working-hours tr" style="display:none;"><i class="far fa-clock"></i> Çalışma Saatleri: 7/24</p>
+            </div>
+            <p class="copyright">&copy; 2024 ASK RENT A CAR. All rights reserved.</p>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html> 
